@@ -1,5 +1,13 @@
+import Header from "./components/header";
+import Main from "./components/main";
+
 function App() {
-  return <p className="text-center text-red-800">Setting...</p>;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
 export default App;
