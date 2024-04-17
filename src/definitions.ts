@@ -4,9 +4,9 @@ type FlagsType = {
 };
 
 type CurrenciesType = {
-  code: string;
-  name: string;
-  symbol: string;
+  code?: string;
+  name?: string;
+  symbol?: string;
 };
 
 type LanguageType = {
@@ -50,15 +50,16 @@ export type CountryType = {
   demonym?: string;
   area?: number;
   timezones?: string[];
-  borders?: string[];
+  borders: string[];
   nativeName?: string;
   numericCode?: string;
   flags?: FlagsType;
-  currencies?: CurrenciesType[];
-  languages?: LanguageType[];
+  currencies: CurrenciesType[];
+  languages: LanguageType[];
   translations?: TranslationType;
   flag?: string;
   regionalBlocs?: RegionalBlocType[];
   cioc?: string;
   independent?: boolean;
+  id: string;
 };
