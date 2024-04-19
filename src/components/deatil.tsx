@@ -21,7 +21,7 @@ export default function Detail({
     <Main>
       <div className="py-8 px-2 w-11/12 mx-auto max-w-[1440px]">
         <button
-          className="py-2 px-5 md:px-8 flex justify-between items-center rounded-sm shadow-[0px_0px_27px_-11px_rgba(0,0,0,0.75)] mb-16 text-sm md:text-base font-light"
+          className="py-2 px-5 md:px-8 flex justify-between items-center rounded-sm shadow-[0px_0px_27px_-11px_rgba(0,0,0,0.75)] mb-16 text-sm md:text-base font-light dark:bg-darkBlue transition-colors duration-500 ease-in-out dark:text-white"
           onClick={() => setDetail("-1")}
         >
           <ArrowLongLeftIcon className="w-5 mr-4" />
@@ -36,7 +36,7 @@ export default function Detail({
               alt={country.name}
             />
           </div>
-          <div className="">
+          <div className="dark:text-white transition-colors duration-500 ease-in-out">
             <div className="lg:flex lg:justify-between lg:items-center">
               <div className="mb-8 lg:mb-0">
                 <h3 className="text-lg lg:text-2xl font-bold mb-8">
@@ -118,7 +118,7 @@ export default function Detail({
                 {country.borders.map((border) => (
                   <li
                     key={border}
-                    className="shadow-[0px_0px_10px_-5px_rgba(0,0,0,0.75)] bg-white place-content-center text-center text-sm capitalize p-1 rounded-sm"
+                    className="shadow-[0px_0px_10px_-5px_rgba(0,0,0,0.75)] bg-white place-content-center text-center text-sm capitalize p-1 rounded-sm dark:bg-darkBlue"
                   >
                     {border}
                   </li>

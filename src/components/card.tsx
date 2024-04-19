@@ -16,13 +16,13 @@ export default function Card({
   capital,
 }: CardPropsType) {
   return (
-    <div className="rounded-lg bg-white">
+    <div className="rounded-lg bg-white dark:bg-darkBlue transition-colors duration-500 ease-in-out">
       <img
         src={imgSrc}
         alt={altText}
         className="rounded-t-lg object-fill w-80 lg:w-96 h-48"
       />
-      <div className="p-5 pb-10 md:w-80 lg:w-72">
+      <div className="p-5 pb-10 md:w-80 lg:w-72 dark:text-white transition-colors duration-500 ease-in-out">
         <h3 className="text-base lg:text-xl font-semibold lg:font-extrabold my-4 truncate">
           {name}
         </h3>

@@ -72,12 +72,12 @@ export default function Home({ countries, setDetail }: MainPropsType) {
     <Main>
       <div className="py-8 w-11/12 mx-auto max-w-[1440px]">
         <div className="mb-8 flex flex-col lg:flex-row lg:justify-between gap-4">
-          <div className="w-full bg-white py-3 pl-8 pr-3 rounded-md flex justify-start items-center shadow-inner lg:basis-[500px] lg:py-5 focus:border-[2px] focus:border-gray-400">
-            <MagnifyingGlassIcon className="w-5 text-gray-400" />
+          <div className="w-full bg-white dark:bg-darkGrayLightInput py-3 pl-8 pr-3 rounded-md flex justify-start items-center shadow-inner lg:basis-[500px] lg:py-5 focus:border-[2px] focus:border-gray-400 transition-colors duration-500 ease-in-out">
+            <MagnifyingGlassIcon className="w-5 text-gray-400 dark:text-gray-200" />
             <input
               type="search"
               id="query"
-              className="ml-5 text-sm lg:text-base w-full outline-none"
+              className="ml-5 text-sm lg:text-base w-full outline-none dark:bg-darkGrayLightInput transition-colors duration-500 ease-in-out dark:placeholder:text-gray-200"
               placeholder="Search for a country..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -85,7 +85,7 @@ export default function Home({ countries, setDetail }: MainPropsType) {
           </div>
           <div className="relative w-2/3 md:max-w-[330px] lg:max-w-[250px]">
             <button
-              className="bg-white py-3 lg:py-5 pl-6 pr-5 text-sm lg:text-base rounded-md flex justify-between items-center w-full"
+              className="bg-white dark:bg-darkGrayLightInput transition-colors duration-500 ease-in-out py-3 lg:py-5 pl-6 pr-5 text-sm lg:text-base text-gray-400 dark:text-gray-200 rounded-md flex justify-between items-center w-full"
               onClick={() => setOpen(!open)}
             >
               {filterParam === "All" ? (
@@ -99,7 +99,7 @@ export default function Home({ countries, setDetail }: MainPropsType) {
             <ul
               className={`absolute z-10 mt-2 ${
                 open ? "" : "collapse"
-              } max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm`}
+              } max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm dark:bg-darkGrayLightInput transition-colors duration-500 ease-in-out`}
               tabIndex={-1}
               role="listbox"
               aria-labelledby="listbox-label"
@@ -108,7 +108,7 @@ export default function Home({ countries, setDetail }: MainPropsType) {
               {regions.map((region, index) => (
                 <li
                   key={index}
-                  className="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:bg-darkGrayLightInput"
+                  className="text-gray-900 dark:text-gray-200 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:bg-darkGrayLightInput dark:hover:bg-vDarkGrayLightBg dark:hover:text-darkGrayLightInput"
                   id={`listbox-option-${index}`}
                   role="option"
                   aria-selected={filterParam === region ? true : false}
