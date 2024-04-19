@@ -3,9 +3,9 @@ import { SunIcon } from "@heroicons/react/24/solid";
 import { useLocalStorage } from "usehooks-ts";
 import { MoonIcon } from "@heroicons/react/24/outline";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes: string[]) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 function ThemeSwitch() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
